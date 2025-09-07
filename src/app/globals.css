@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --divider-color: #e5e7eb;
 }
 
 @theme inline {
@@ -16,6 +17,68 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+@layer utilities {
+  /* Horizontal (top + bottom) */
+  .line-y {
+    @apply relative;
+  }
+  .line-y::before,
+  .line-y::after {
+    content: "";
+    @apply absolute inset-x-0 h-px bg-gray-200;
+  }
+  .line-y::before { top: 0; }
+  .line-y::after { bottom: 0; }
+
+  /* Vertical (left + right) */
+  .line-x {
+    @apply relative;
+  }
+  .line-x::before,
+  .line-x::after {
+    content: "";
+    @apply absolute inset-y-0 w-px  bg-gray-200 z-50;
+  }
+  .line-x::before { left: 0; }
+  .line-x::after { right: 0; }
+
+  /* Top only */
+  .line-t {
+    @apply relative;
+  }
+  .line-t::before {
+    content: "";
+    @apply absolute top-0 inset-x-0 h-px bg-gray-200 z-50;
+  }
+
+  /* Bottom only */
+  .line-b {
+    @apply relative;
+  }
+  .line-b::after {
+    content: "";
+    @apply absolute bottom-0 inset-x-0 h-px bg-gray-200;
+  }
+
+  .line-l {
+    @apply relative;
+  }
+  .line-l::before {
+    content: "";
+    @apply absolute inset-y-0 left-0 w-px bg-gray-200;
+    z-index: 50;
+  }
+
+  /* Right only */
+  .line-r {
+    @apply relative;
+  }
+  .line-r::after {
+    content: "";
+    @apply absolute inset-y-0 right-0 w-px bg-gray-200;
+    z-index: 50;
   }
 }
 
