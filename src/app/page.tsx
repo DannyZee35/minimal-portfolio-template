@@ -1,13 +1,16 @@
+import { Blogs } from "@/sections/Blogs";
 import { Hero } from "@/sections/Hero";
-import Image from "next/image";
+import { Projects } from "@/sections/Projects";
+
 
 export default function Home() {
   return (
    <>
-   <div className="h-[100vh]">
+   
     <Hero/>
-    
-    </div>
+    <Projects/>
+    <Blogs/>
+     
    </>
   );
 }

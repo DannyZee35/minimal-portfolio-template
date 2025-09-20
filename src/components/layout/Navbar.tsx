@@ -12,12 +12,12 @@ import { ThemeToggle } from '../ui/ThemeToggle';
 export const Navbar = () => {
 
   return (
-   <header className="w-full   backdrop-blur-md fixed top-0 left-0 z-40 h-full  line-b">
-      <div className="max-w-6xl mx-auto flex items-center justify-between h-full   ">
-        <div className="font-bold text-xl tracking-wide line-r h-full p-5">
+   <header className="w-full backdrop-blur-md fixed top-0 left-0 z-40 h-full line-b ">
+      <div className="flex items-center justify-between h-full  max-w-5xl mx-auto  ">
+        <div className="font-bold text-xl tracking-wide   h-full  line-x p-5 ">
       DA
     </div>
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-6 line-r p-3  h-full">
           <NavLinks />
           <ThemeToggle />
         </div>
