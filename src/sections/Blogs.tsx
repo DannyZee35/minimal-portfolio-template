@@ -36,7 +36,7 @@ export const Blogs = () => {
                                   
                                    
                                 </Link>
-                                 <p className='w-fit px-8 py-8'>{datePosted}</p>
+                                 <p className=' px-8 py-8 w-[250px]'>{datePosted}</p>
                             </div>
                         ))}
                     </div>
