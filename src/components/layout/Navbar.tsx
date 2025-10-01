@@ -1,11 +1,12 @@
 import React from 'react'
 import { ThemeToggle } from '../ui/ThemeToggle';
+import Link from 'next/link';
 
 
   const links = [
-  { name: "About", href: "/about-me" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
+  { name: "About Me", href: "/about-me" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blogs", href: "/blogs" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -14,9 +15,9 @@ export const Navbar = () => {
   return (
    <header className="w-full backdrop-blur-md fixed top-0 left-0 z-40 h-full line-b ">
       <div className="flex items-center justify-between h-full  max-w-5xl mx-auto  ">
-        <div className="font-bold text-xl tracking-wide   h-full  line-x p-5 ">
-      DA
-    </div>
+        <Link href="/" > <div className="font-bold text-xl tracking-wide   h-full  line-x p-5 ">
+      <span>BW</span>
+    </div> </Link>
         <div className="flex items-center space-x-6 line-r p-3  h-full">
           <NavLinks />
           <ThemeToggle />

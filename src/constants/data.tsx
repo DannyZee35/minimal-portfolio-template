@@ -1,46 +1,73 @@
+import { Achievement } from "@/app/about-me/page";
 import { projectCardProps } from "@/components/features/ProjectCard";
 import { blogsProps } from "@/sections/Blogs";
 import { testimonialProps } from "@/sections/TestimonialSections";
 import { workExperienceProps } from "@/sections/WorkExperience";
-
-
+ 
 export const projectsData: projectCardProps[] = [
   {
     imageSrc: "/Frame 10.png",
     title: "Portfolio Website",
-    description: "A personal portfolio website built with Next.js and Tailwind CSS."
+    description: "Even Batman needs a portfolio. This one helps me pretend I have a normal life."
   },
   {
     imageSrc: "/Frame 10.png",
     title: "E-commerce App",
-    description: "A full-stack e-commerce application with Stripe payment integration."
+    description: "An e-commerce app so slick, even the Joker can’t mess with the checkout."
   },
   {
     imageSrc: "/Frame 10.png",
     title: "Chat App",
-    description: "A real-time chat application using React, Node.js, and Socket.IO."
-  }
+    description: "Real-time chat, because Gotham deserves instant hero updates."
+  },
+  {
+    imageSrc: "/Frame 10.png",
+    title: "Portfolio Website",
+    description: "Another portfolio site. Alfred says I have too many, but I disagree."
+  },
+  {
+    imageSrc: "/Frame 10.png",
+    title: "E-commerce App",
+    description: "Stripe-powered, because even superheroes need secure transactions."
+  },
+  {
+    imageSrc: "/Frame 10.png",
+    title: "Chat App",
+    description: "Talk to your allies instantly—just don’t tell the villains."
+  },
 ]
 
 
 export const blogsData: blogsProps[] = [
   {
-    title: "Advanced CSS Techniques for Modern Web Development",
-    description: "Explore advanced CSS techniques including CSS Grid, Flexbox, Custom Properties, and modern layout patterns that will tak...",
+    title: "Bat-CSS Secrets",
+    description: "Learning CSS in the Batcave: dark themes, sharp grids, and layouts that strike fear into villains.",
     datePosted: "Thursday, Feb 15, 2024",
-    link: "/blog"
+    link: "/blog/bat-css-secrets"
   },
   {
-    title: "Advanced CSS Techniques for Modern Web Development",
-    description: " , Custom Properties, and modern layout patterns that will tak...",
-    datePosted: "Thursday, Feb 15, 2024",
-    link: "/blog"
+    title: "JavaScript for Vigilantes",
+    description: "Dodging bugs and catching callbacks faster than the Batmobile on a Gotham night.",
+    datePosted: "Friday, Feb 16, 2024",
+    link: "/blog/js-for-vigilantes"
   },
   {
-    title: "Advanced CSS Techniques for Modern Web Development",
-    description: "Explore advanced CSS techniques including CSS Grid, Flexbox, Custom Properties, and modernExplore advanced CSS techniques including CSS Grid, Flexbox, Custom Properties, and modern layout patterns that will tak layout patterns that will tak...",
-    datePosted: " , Feb 15, 2024",
-    link: "/blog"
+    title: "Real-Time Crime Alerts",
+    description: "Building chat and notification systems that keep Gotham’s heroes one step ahead of trouble.",
+    datePosted: "Saturday, Feb 17, 2024",
+    link: "/blog/real-time-crime-alerts"
+  },
+  {
+    title: "Wayne Tech UX Tips",
+    description: "Designing interfaces so smooth, even Alfred approves them before Batman storms in.",
+    datePosted: "Sunday, Feb 18, 2024",
+    link: "/blog/wayne-tech-ux-tips"
+  },
+  {
+    title: "Securing Gotham Online",
+    description: "Encryption, authentication, and other Bat-hacks to keep villains out of your data.",
+    datePosted: "Monday, Feb 19, 2024",
+    link: "/blog/securing-gotham-online"
   },
 ]
 
@@ -105,47 +132,87 @@ export const workExperienceData: workExperienceProps[] = [
 
 
 
-export const testimonialsData: testimonialProps[] = [
+ export const testimonialsData: testimonialProps[] = [
   {
-    name: "Sarah Johnson",
+    name: "Bruce Wayne (Batman)",
     avatar: "/Frame 10.png",
     testimonial:
-      "Working with this team was an absolute pleasure. They understood our requirements quickly and delivered a polished product that exceeded expectations.",
-    designation: "Product Manager, TechNova",
+      "Faster than the Batmobile and just as precise. Gotham would be proud of their work. Every detail was considered, leaving no room for mistakes in the final product.",
+    designation: "CEO, Wayne Enterprises",
   },
   {
-    name: "Michael Lee",
+    name: "Clark Kent (Superman)",
     avatar: "/Frame 10.png",
     testimonial:
-      "Their attention to detail and commitment to quality really stood out. I’d highly recommend them for any web development project.",
-    designation: "CTO, CloudEdge Solutions",
+      "Reliable and super-efficient, delivering results even I can’t fly past. Their commitment to quality is as strong as my Kryptonian resolve.",
+    designation: "Reporter, Daily Planet",
   },
   {
-    name: "Emily Davis",
+    name: "Diana Prince (Wonder Woman)",
     avatar: "/Frame 10.png",
     testimonial:
-      "A fantastic experience! The project was completed on time, communication was clear, and the results were outstanding.",
-    designation: "Founder, Visionary Apps",
+      "Professional, heroic, and always on time. A team worthy of the Justice League, with creativity and technical expertise that would impress even the gods of Themyscira.",
+    designation: "Ambassador, Themyscira",
   },
   {
-    name: "Daniel Smith",
+    name: "Barry Allen (The Flash)",
     avatar: "/Frame 10.png",
     testimonial:
-      "They bring a perfect balance of creativity and technical expertise. We loved how smoothly the collaboration went.",
-    designation: "Lead Designer, InnoSoft Labs",
+      "Lightning-fast responses and speedy delivery—rivaling even my own pace. Communication was clear, and every milestone was met without delay.",
+    designation: "Forensic Scientist, Central City",
   },
   {
-    name: "Sophia Martinez",
+    name: "Arthur Curry (Aquaman)",
     avatar: "/Frame 10.png",
     testimonial:
-      "Professional, reliable, and innovative. They truly care about the success of the project and go the extra mile.",
-    designation: "CEO, NextGen Systems",
+      "Smooth, reliable, and always afloat under pressure. The team navigates challenges like I navigate the oceans—effortlessly and with precision.",
+    designation: "King of Atlantis",
   },
   {
-    name: "James Wilson",
+    name: "Hal Jordan (Green Lantern)",
     avatar: "/Frame 10.png",
     testimonial:
-      "The team was proactive in suggesting improvements that made the final product even better. Highly satisfied with the work!",
-    designation: "Operations Head, DataWorks Inc.",
+      "Creativity powered by pure will. Their work shines brighter than a Green Lantern ring, turning ambitious ideas into reality with flawless execution.",
+    designation: "Pilot, Green Lantern Corps",
   },
 ];
+
+
+export const achievements: Achievement[] = [
+  {
+    year: "2021",
+    title: "Started Computer Science Degree",
+    description: [
+      "Began my journey in Computer Science.",
+      "Focused on leadership & technology pathway.",
+    ],
+ 
+  },
+  {
+    year: "2022",
+    title: "First Freelance Project",
+    description: [
+      "Developed and deployed a full-stack web app for a local business.",
+      "Stack: Next.js, MongoDB, Tailwind CSS.",
+    ],
+    
+  },
+  {
+    year: "2023",
+    title: "Hackathon Winner",
+    description: [
+      "Won 1st place in a university hackathon.",
+      "Created an AI-powered study tool with real-time feedback.",
+    ],
+   
+  },
+  {
+    year: "2024",
+    title: "Internship at Tech Company",
+    description: [
+      "Worked as a frontend developer on a SaaS dashboard.",
+      "Gained experience with React, TypeScript, and large-scale systems.",
+    ],
+    
+  },
+]

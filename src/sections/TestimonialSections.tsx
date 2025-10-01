@@ -1,3 +1,4 @@
+import { ShimmerText } from '@/components/ui/ShimmerText';
 import { testimonialsData } from '@/constants/data';
 import React from 'react'
 
@@ -14,10 +15,7 @@ export const TestimonialSections = () => {
             <div className=' line-b'>
                 <div className='max-w-5xl mx-auto line-x  ' >
                     <div className=' px-8 py-8  line-b'>
-                        <h1 className="text-4xl sm:text-6xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-
-                            Testimonials
-                        </h1>
+                        <ShimmerText text='Bat-Signal Reviews' spread='16px'/>
 
                     </div>
 
