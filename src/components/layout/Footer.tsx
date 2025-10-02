@@ -6,7 +6,7 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <section className=" line-b  ">
+    <section className=" line-y ">
       <div className="max-w-5xl mx-auto line-x  flex items-center justify-between">
         <p className="px-8">Made with Love by Danial Aziz.</p>
 

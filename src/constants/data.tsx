@@ -72,61 +72,42 @@ export const blogsData: blogsProps[] = [
 ]
 
  
-
 export const workExperienceData: workExperienceProps[] = [
   {
-    companyName: "TechNova Solutions",
+    companyName: "Google",
     role: "Frontend Developer",
     description:
-      "Built and maintained responsive web applications using React, TypeScript, and TailwindCSS. Collaborated with designers to create pixel-perfect UI components.",
+      "Developed and maintained responsive web applications using React, TypeScript, and TailwindCSS. Collaborated with UX designers to deliver pixel-perfect, accessible, and scalable UI components.",
     startDate: "Jan 2021",
     endDate: "Dec 2021",
-    companyLogo: "/Frame 10.png",
+    companyLogo: "/work/google.png",
   },
   {
-    companyName: "InnoSoft Labs",
+    companyName: "Amazon",
     role: "Full Stack Developer",
     description:
-      "Developed full-stack applications with Next.js and Node.js. k applications with Next.js and Node.js. Designed REST APIs aDesigned REST APIs and integrated with third-party services for payments and analytics.",
+      "Built and optimized full-stack applications using Next.js, Node.js, and Express. Designed REST APIs, integrated third-party services (payments, analytics), and improved system performance by 20%.",
     startDate: "Feb 2020",
     endDate: "Dec 2020",
-    companyLogo: "/Frame 10.png",
+    companyLogo: "/work/amazon.png",
   },
   {
-    companyName: "CloudEdge Technologies",
+    companyName: "Shopify",
     role: "Backend Developer",
     description:
-      "Implemented scalable APIs using Express and MongoDB. Focused on performance optimization, database schema design, and deployment automation.",
+      "Implemented scalable and secure APIs with Express and MongoDB. Designed efficient database schemas, automated deployments with CI/CD pipelines, and reduced server response time by 15%.",
     startDate: "Aug 2019",
     endDate: "Jan 2020",
-    companyLogo: "/Frame 10.png",
+    companyLogo: "/work/shopify.png",
   },
   {
-    companyName: "Visionary Apps",
+    companyName: "Microsoft",
     role: "Software Engineer Intern",
     description:
-      "Assisted in developing mobile-first features, wrote unit tests, and contributed to documentation. Learned agile development practices.",
+      "Contributed to the development of mobile-first features for internal tools. Wrote unit and integration tests, updated technical documentation, and participated in agile sprint planning.",
     startDate: "Jun 2018",
     endDate: "Jul 2019",
-    companyLogo: "/Frame 10.png",
-  },
-  {
-    companyName: "NextGen Systems",
-    role: "UI/UX Engineer",
-    description:
-      "Designed and implemented reusable UI components. Conducted user research and usability testing to improve overall customer experience.",
-    startDate: "Jan 2017",
-    endDate: "May 2018",
-    companyLogo: "/Frame 10.png",
-  },
-  {
-    companyName: "DataWorks Inc.",
-    role: "Junior Web Developer",
-    description:
-      "Maintained existing websites, fixed bugs, and implemented small new features. Gained foundational experience in HTML, CSS, and JavaScript.",
-    startDate: "Sep 2016",
-    endDate: "Dec 2016",
-    companyLogo: "/Frame 10.png",
+    companyLogo: "/work/microsoft.png",
   },
 ];
 

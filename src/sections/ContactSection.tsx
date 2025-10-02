@@ -7,7 +7,7 @@ import React from 'react'
 export const ContactSection = () => {
     return (
         <>
-            <div className=' line-b relative'>
+            <div className=' relative'>
                  <div className='absolute inset-0'>
          <DiagonalLines/>
        </div>
