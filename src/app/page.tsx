@@ -5,18 +5,15 @@ import { Projects } from "@/sections/Projects";
 import { TestimonialSections } from "@/sections/TestimonialSections";
 import { WorkExperience } from "@/sections/WorkExperience";
 
-
 export default function Home() {
   return (
-   <>
-   
-    <Hero/>
-    <Projects/>
-    <Blogs/>
-    <WorkExperience/>
-    <TestimonialSections/>
-    <ContactSection/>
-     
-   </>
+    <>
+      <Hero />
+      <Projects />
+      <Blogs />
+      <WorkExperience />
+      <TestimonialSections />
+      <ContactSection />
+    </>
   );
 }

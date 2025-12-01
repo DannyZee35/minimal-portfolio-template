@@ -1,19 +1,16 @@
-import { achievements } from '@/constants/data'
-import { Badge, BadgeCheck } from 'lucide-react'
-import React from 'react'
+import { achievements } from "@/constants/data";
+import { BadgeCheck } from "lucide-react";
+import React from "react";
 
 export const Timeline = () => {
   return (
-     <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-8  ">Achievements</h2>
       <div className="relative flex flex-col gap-4">
         {achievements.map((item, i) => {
-          
           return (
             <div key={i} className="flex flex-col gap-4">
-           
               <time className="flex items-center text-sm font-semibold rounded-md py-1 px-4 border border-gray-500 w-fit text-gray-800">
-               
                 {item.year}
               </time>
 
@@ -23,7 +20,6 @@ export const Timeline = () => {
                 {item.title}
               </h3>
 
-              
               <div className="mt-1 space-y-1">
                 {item.description.map((line, j) => (
                   <p key={j} className="text-gray-600 text-sm leading-relaxed">
@@ -32,9 +28,9 @@ export const Timeline = () => {
                 ))}
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
