@@ -1,3 +1,4 @@
+import { AnimateBlurFadeUp } from '@/components/ui/AnimateBlurFadeUp';
 import { ShimmerText } from '@/components/ui/ShimmerText';
 import { testimonialsData } from '@/constants/data';
 import React from 'react'
@@ -14,9 +15,10 @@ export const TestimonialSections = () => {
         <>
             <div className=' line-b'>
                 <div className='max-w-5xl mx-auto line-x  ' >
-                    <div className=' px-8 py-8  line-b'>
+                    <div className=' px-8 py-8  line-b'> 
+                         <AnimateBlurFadeUp >
                         <ShimmerText text='Bat-Signal Reviews' spread='16px'/>
-
+</AnimateBlurFadeUp>
                     </div>
 
                     <div className="grid grid-cols-2     ">

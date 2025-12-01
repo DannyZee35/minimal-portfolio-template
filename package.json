@@ -15,6 +15,7 @@
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
+    "motion": "^12.23.24",
     "next": "15.5.2",
     "next-mdx-remote": "^5.0.0",
     "react": "19.1.0",

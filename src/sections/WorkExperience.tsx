@@ -1,3 +1,4 @@
+import { AnimateBlurFadeUp } from '@/components/ui/AnimateBlurFadeUp';
 import { DiagonalLines } from '@/components/ui/DiagonalLines';
 import { ShimmerText } from '@/components/ui/ShimmerText';
 import { blogsData, workExperienceData } from '@/constants/data'
@@ -23,8 +24,9 @@ export const WorkExperience = () => {
         </div>
         <div className='max-w-5xl mx-auto line-x  bg-white' >
           <div className=' px-8 py-8  line-b'>
+              <AnimateBlurFadeUp  >
             <ShimmerText text='Wayne Enterprises & Beyond' spread='30px' />
-
+</AnimateBlurFadeUp>
           </div>
           <div className="flex flex-col">
             {workExperienceData.map(
