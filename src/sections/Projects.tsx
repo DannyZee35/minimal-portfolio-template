@@ -40,7 +40,7 @@ export const Projects = () => {
         <div className='absolute inset-0'>
           <DiagonalLines />
         </div>
-        <div className='max-w-5xl mx-auto line-x px-8 py-8 bg-white' >
+        <div className='max-w-5xl mx-auto line-x px-8 py-8 bg-white dark:bg-zinc-950' >
           {pathname === "/" && <>
             <AnimateBlurFadeUp delay={.2}  >
               <ShimmerText text='Projects That Even Alfred Approves' spread='50px' />

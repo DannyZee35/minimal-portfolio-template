@@ -22,7 +22,7 @@ export const WorkExperience = () => {
         <div className='absolute inset-0'>
           <DiagonalLines />
         </div>
-        <div className='max-w-5xl mx-auto line-x  bg-white' >
+        <div className='max-w-5xl mx-auto line-x  bg-white dark:bg-zinc-950' >
           <div className=' px-8 py-8  line-b'>
               <AnimateBlurFadeUp  >
             <ShimmerText text='Wayne Enterprises & Beyond' spread='30px' />
@@ -37,11 +37,11 @@ export const WorkExperience = () => {
                     <div className="flex items-center gap-4">
 
                       <div>
-                        <h2 className="text-lg font-bold">{companyName}</h2>
-                        <p className="text-md">{role} <span>{startDate} – {endDate}</span></p>
+                        <h2 className="text-lg font-bold dark:text-gray-200">{companyName}</h2>
+                        <p className="text-md dark:text-gray-300">{role} <span>{startDate} – {endDate}</span></p>
                       </div>
                     </div>
-                    <p className="text-md mt-3 max-w-[600px]">{description}</p>
+                    <p className="text-md mt-3 max-w-[600px] dark:text-gray-400">{description}</p>
                   </div>
 
 

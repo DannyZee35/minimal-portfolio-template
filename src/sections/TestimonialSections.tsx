@@ -25,10 +25,10 @@ export const TestimonialSections = () => {
                         {testimonialsData.map(({ name, avatar, testimonial, designation }, index) => (
                             <div
                                 key={index}
-                                className="bg-white rounded-2xl py-4 flex flex-col  line-r  justify-between h-[220px]"
+                                className="bg-white dark:bg-zinc-950 rounded-2xl py-4 flex flex-col  line-r  justify-between h-[220px]"
                             >
 
-                                <p className="text-gray-600 italic   text-xl px-8 ">"{testimonial}"</p>
+                                <p className="text-gray-600 italic   text-xl px-8 dark:text-gray-400 ">"{testimonial}"</p>
 
 
                                 <div className='flex items-start gap-3 line-y py-1 px-8'>
@@ -38,8 +38,8 @@ export const TestimonialSections = () => {
                                         className="w-10 h-10 rounded-full object-cover "
                                     />
                                     <div>
-                                        <h3 className="text-sm font-semibold text-gray-900">{name}</h3>
-                                        <p className="text-sm text-gray-500">{designation}</p>
+                                        <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-200">{name}</h3>
+                                        <p className="text-sm text-gray-500 dark:text-gray-400">{designation}</p>
                                     </div>
                                 </div>
                             </div>

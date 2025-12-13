@@ -74,7 +74,7 @@ function page() {
         <div className=' line-t'>
 <div className=' max-w-5xl mx-auto grid grid-cols-5 line-x'>
  <div className="col-span-3 line-r space-y-4 p-8 text-lg ">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed dark:text-gray-400">
               Hi, I’m <span className="font-semibold text-blue-600">Danial</span>, a curious
               problem-solver with a passion for building digital experiences that balance{" "}
               <span className="font-medium">functionality</span> and{" "}
@@ -83,7 +83,7 @@ function page() {
               developing applications that people actually use.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed dark:text-gray-400">
               I’m currently pursuing a degree in{" "}
               <span className="font-semibold">Computer Science</span> with a focus on{" "}
               <span className="font-semibold">Leadership & Technology</span>. Along the
@@ -92,7 +92,7 @@ function page() {
               efficient.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed dark:text-gray-400">
               Outside of coding, I enjoy diving into{" "}
               <span className="italic">UI/UX trends</span>, brainstorming business ideas,
               and collaborating on projects that push me outside my comfort zone. My goal
@@ -100,7 +100,7 @@ function page() {
               are both innovative and impactful.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed dark:text-gray-400">
               Whether it’s <span className="font-medium">building apps</span>,
               <span className="font-medium"> mentoring peers</span>, or{" "}
               <span className="font-medium">crafting strategies</span>, I love working at

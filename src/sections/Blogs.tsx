@@ -28,12 +28,12 @@ export const Blogs = () => {
                                 <Link href={link} className='flex-1 line-r py-8'>
 
                                      
-                                        <h2 className='text-lg font-bold'>{title}</h2>
-                                        <p className='text-md mt-3'>{description}</p>
+                                        <h2 className='text-lg font-bold dark:text-gray-200'>{title}</h2>
+                                        <p className='text-md mt-3 dark:text-gray-400'>{description}</p>
                                   
                                    
                                 </Link>
-                                 <p className=' px-8 py-8 w-[250px]'>{datePosted}</p>
+                                 <p className=' px-8 py-8 w-[250px] dark:text-gray-400'>{datePosted}</p>
                             </div>
                         ))}
                     </div>

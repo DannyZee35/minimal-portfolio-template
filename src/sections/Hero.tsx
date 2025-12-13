@@ -7,7 +7,7 @@ import React from "react";
 
 export const Hero: React.FC = () => {
   return (
-    <section className=" line-b ">
+    <section className=" line-b   ">
     
 
 
@@ -19,15 +19,15 @@ export const Hero: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="space-y-6  py-8 ">
 <AnimateBlurFadeUp  >
-            <p className=" font-mono text-sm uppercase tracking-widest text-gray-600 dark:text-gray-400">
+            <p className=" font-mono text-sm uppercase tracking-widest text-gray-600   dark:text-gray-400">
               By Bruce Wayne
             </p></AnimateBlurFadeUp>
             <AnimateBlurFadeUp delay={.2}>
 
-            <ShimmerText text="I am Batman" className="text-4xl" spread="20px"/>
+            <ShimmerText text="I am Batman" className="text-4xl " spread="20px"/>
             </AnimateBlurFadeUp>
    <AnimateBlurFadeUp delay={.3}  >
-            <p className="max-w-xl text-base   text-gray-500  ">
+            <p className="max-w-xl text-base   text-gray-500 dark:text-gray-400  ">
               Fighting crime in Gotham because regular coding jobs weren't challenging enough.
               By day, I build apps. By night, I fight villains. Cape sold separately.
             </p></AnimateBlurFadeUp>

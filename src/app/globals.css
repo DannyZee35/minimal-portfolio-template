@@ -1,15 +1,16 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --divider-color: #e5e7eb;
   --color-gray-950: oklch(13% .028 261.692);
---grid-line-color: color-mix(in oklab, var(--color-gray-950) 5%, transparent);
---color-text:oklch(37.3% 0.034 259.733) ;
-  --color-white: #ffffff; 
- 
+  --grid-line-color: color-mix(in oklab, var(--color-gray-950) 5%, transparent);
+  --color-text: oklch(37.3% 0.034 259.733);
+  --color-white: #ffffff;
+
 
 
 }
@@ -17,7 +18,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-      --color-gray-950: oklch(13% .028 261.692);
+  --color-gray-950: oklch(13% .028 261.692);
   --grid-line-color: color-mix(in oklab, var(--color-gray-950) 5%, transparent);
 
 
@@ -32,85 +33,142 @@
     --foreground: #ededed;
   }
 }
+
 @layer utilities {
+
   /* Horizontal (top + bottom) */
   .line-y {
     @apply relative;
   }
+
   .line-y::before,
   .line-y::after {
     content: "";
     @apply absolute inset-x-0 h-px bg-gray-200;
   }
-  .line-y::before { top: 0; }
-  .line-y::after { bottom: 0; }
+
+  [data-theme="dark"] .line-y::before,
+[data-theme="dark"] .line-y::after {
+  @apply bg-gray-600;
+}
+
+  .line-y::before {
+    top: 0;
+  }
+
+  .line-y::after {
+    bottom: 0;
+  }
 
   /* Vertical (left + right) */
   .line-x {
     @apply relative;
   }
+
   .line-x::before,
   .line-x::after {
     content: "";
-    @apply absolute inset-y-0 w-px  bg-gray-200 z-50;
+    @apply absolute inset-y-0 w-px bg-gray-200 z-50;
   }
-  .line-x::before { left: 0; }
-  .line-x::after { right: 0; }
+
+  [data-theme="dark"] .line-x::before,
+[data-theme="dark"] .line-x::after {
+  @apply bg-gray-600;
+}
+
+  
+
+  .line-x::before {
+    left: 0;
+  }
+
+  .line-x::after {
+    right: 0;
+  }
 
   /* Top only */
   .line-t {
     @apply relative;
   }
+
   .line-t::before {
     content: "";
     @apply absolute top-0 inset-x-0 h-px bg-gray-200 z-50;
+  }
+
+   [data-theme="dark"] .line-t::before {
+    @apply bg-gray-600;
   }
 
   /* Bottom only */
   .line-b {
     @apply relative;
   }
+
   .line-b::after {
     content: "";
     @apply absolute bottom-0 inset-x-0 h-px bg-gray-200;
   }
 
+  [data-theme="dark"] .line-b::after {
+    @apply bg-gray-600;
+  }
+
   .line-l {
     @apply relative;
   }
+
   .line-l::before {
     content: "";
     @apply absolute inset-y-0 left-0 w-px bg-gray-200;
     z-index: 50;
   }
-
-  /* Right only */
+ [data-theme="dark"] .line-l::before {
+    @apply bg-gray-600;
+  }
+   
   .line-r {
     @apply relative;
   }
+
   .line-r::after {
     content: "";
     @apply absolute inset-y-0 right-0 w-px bg-gray-200;
     z-index: 50;
   }
+   [data-theme="dark"] .line-r::after {
+    @apply bg-gray-600;
+  }
 }
- 
+
 body {
-  background: var(--background);
+
   color: var(--foreground);
- 
+
   font-family: var(--font-sans);
- 
+
 }
 
 
- @theme {
+@theme {
   --animate-shimmer: shimmer 3s linear infinite;
 
-@keyframes shimmer {
-  0%   { background-position: 150% center; }  /* start off right */
-  75%  { background-position: -50% center; }  /* move left → right visually */
-  100% { background-position: -50% center; }  /* pause off-screen left */
-}
+  @keyframes shimmer {
+    0% {
+      background-position: 150% center;
+    }
+
+    /* start off right */
+    75% {
+      background-position: -50% center;
+    }
+
+    /* move left → right visually */
+    100% {
+      background-position: -50% center;
+    }
+
+    /* pause off-screen left */
+  }
 
 }

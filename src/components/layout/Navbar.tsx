@@ -1,6 +1,7 @@
 import React from 'react'
-import { ThemeToggle } from '../ui/ThemeToggle';
+ 
 import Link from 'next/link';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 
   const links = [
@@ -20,7 +21,7 @@ export const Navbar = () => {
     </div> </Link>
         <div className="flex items-center space-x-6 line-r p-3  h-full">
           <NavLinks />
-          <ThemeToggle />
+          <ThemeSwitcher />
         </div>
       </div>
     </header>
