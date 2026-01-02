@@ -24,8 +24,8 @@ export const Blogs = () => {
                    </div>
                     <div className='flex flex-col '>
                         {blogsData.map(({ title, datePosted, description, link }, index) => (
-                            <div key={index}   className='flex w-full px-8 line-b'>
-                                <Link href={link} className='flex-1 line-r py-8'>
+                            <div key={index}   className='flex    sm:flex-row flex-col sm:gap-0 gap-5 sm:py-0 py-8 w-full px-8 line-b'>
+                                <Link href={link} className='flex-1  line-r sm:py-8'>
 
                                      
                                         <h2 className='text-lg font-bold dark:text-gray-200'>{title}</h2>
@@ -33,7 +33,7 @@ export const Blogs = () => {
                                   
                                    
                                 </Link>
-                                 <p className=' px-8 py-8 w-[250px] dark:text-gray-400'>{datePosted}</p>
+                                 <p className=' sm:px-8  sm:py-8 w-[250px] dark:text-gray-400'>{datePosted}</p>
                             </div>
                         ))}
                     </div>

@@ -23,19 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  suppressHydrationWarning className={`${roboto.variable}`}>
-      <body
-        className={`  antialiased     font-sans dark:bg-zinc-950 `}
-      >
-
-        <Navbar />
+    <html lang="en" suppressHydrationWarning className={`${roboto.variable}`}>
+      <body className={`antialiased font-sans dark:bg-zinc-950`}>
         <ThemeProvider>
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
-        <Footer />
-
-
-
       </body>
     </html>
   );

@@ -28,7 +28,7 @@ export const ContactSection = () => {
                     </div>
                     <div className=' grid grid-cols-3 w-full   relative'>
 
-                        <div className='line-r py-6 px-8 col-span-2 flex flex-col gap-5 '>
+                        <div className='line-r py-6 px-8 col-span-12 sm:col-span-2 flex flex-col gap-5 '>
                             <div className="absolute -z-10   inset-0">
                                 <DiagonalLines />
                             </div>
@@ -46,7 +46,7 @@ export const ContactSection = () => {
                             </div>
 
                         </div>
-                        <div className="flex flex-col   ">
+                        <div className=" flex-col  hidden sm:flex ">
 
                             <div className="flex items-center gap-3 py-2 px-4">
                                 <Mail className="w-5 h-5 dark:text-gray-300" />

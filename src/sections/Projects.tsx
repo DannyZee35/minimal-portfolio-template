@@ -57,7 +57,7 @@ export const Projects = () => {
           </>}
          <motion.div variants={containerVariants} initial="initial" animate="animate">
 
-           <motion.div variants={blurVariants} className='py-6 grid grid-cols-3 w-full gap-10 ' >
+           <motion.div variants={blurVariants} className='py-6 grid grid-cols-1 sm:grid-cols-3 w-full gap-5 sm:gap-10 ' >
             {projectsData.slice(0, 3).map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}

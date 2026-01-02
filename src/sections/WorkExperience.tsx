@@ -31,9 +31,9 @@ export const WorkExperience = () => {
           <div className="flex flex-col">
             {workExperienceData.map(
               ({ companyName, role, description, startDate, endDate, companyLogo }, index) => (
-                <div key={index} className="flex w-full px-8 line-b">
+                <div key={index} className="flex w-full flex-col sm:flex-row px-8 py-8 sm:py-0 sm:gap-0 gap-5 line-b">
 
-                  <div className="flex-1 line-r py-8">
+                  <div className="flex-1 line-r sm:py-8">
                     <div className="flex items-center gap-4">
 
                       <div>
@@ -45,7 +45,7 @@ export const WorkExperience = () => {
                   </div>
 
 
-                  <div className="flex items-start justify-end px-8 py-8 w-[250px]">
+                  <div className="flex items-start sm:justify-end sm:px-8  sm:py-8 w-[250px]">
                     <Image
                       src={companyLogo}
                       alt={`${companyName} logo`}

@@ -46,8 +46,8 @@ export const Hero: React.FC = () => {
               </a>
             </div>
           </div>
-         <div className="border-2  border-dashed border-gray-300 rounded-3xl p-2 rotate-6 hover:rotate-0 transition-all duration-300 ">
-           <div className='relative h-[200px] w-[300px] '>
+         <div className="border-2  border-dashed hidden sm:block border-gray-300 dark:border-gray-600 rounded-3xl p-2 rotate-6 hover:rotate-0 transition-all duration-300 ">
+           <div className='relative h-[200px] w-[300px]  '>
             <Image src={'/Frame 10.png'} fill alt='project Image' className=' h-full rounded-2xl object-cover' />
 
 
