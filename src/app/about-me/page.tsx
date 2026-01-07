@@ -57,8 +57,8 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <h3 className="text-zinc-900 dark:text-white font-bold italic text-sm">01. THE APPROACH</h3>
                 <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Hi, I’m <span className="text-zinc-900 dark:text-white">John</span>. I believe that good design is a technical problem.
-                  I’ve spent my career perfecting the handoff between pixels and code, ensuring that no detail is lost in translation.
+                  Hi, I&apos;m <span className="text-zinc-900 dark:text-white">John</span>. I believe that good design is a technical problem.
+                  I&apos;ve spent my career perfecting the handoff between pixels and code, ensuring that no detail is lost in translation.
                 </p>
               </div>
               <div className="space-y-4">
@@ -78,8 +78,8 @@ export default function AboutPage() {
             </div>
 
             <p className="text-2xl text-zinc-800 dark:text-zinc-200 font-light italic leading-snug">
-              "Whether it’s <span className="text-indigo-500">mentoring engineers</span> or refining a design system,
-              I find my best work where technology meets human interaction."
+              &quot;Whether it&apos;s <span className="text-indigo-500">mentoring engineers</span> or refining a design system,
+              I find my best work where technology meets human interaction.&quot;
             </p>
           </div>
 
