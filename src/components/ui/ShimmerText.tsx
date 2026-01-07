@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
-import { DiagonalLines } from './DiagonalLines'
 
 
 
@@ -13,9 +12,8 @@ export const ShimmerText = ({ text, spread, className }: { text: string, spread:
             <div className='size-1 bg-gray-300    absolute -left-px -bottom-px animate-pulse' />
             <div className='size-1 bg-gray-300    absolute -right-px -bottom-px animate-pulse' />
 
-            <div className="absolute z-10    inset-0">
-                <DiagonalLines />
-            </div>         <h2
+
+            <h2
                 className={cn("text-base font-sans dark:text-gray-200    font-bold tracking-tight inline-block   text-center text-transparent  animate-shimmer",
                     "[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--shine-color),#0000_calc(50%+var(--spread)))]",
                     "bg-[length:250%_100%,auto] [background-repeat:no-repeat,padding-box] bg-clip-text",
@@ -32,13 +30,9 @@ export const ShimmerText = ({ text, spread, className }: { text: string, spread:
             >
                 {text}
 
-
-
-
             </h2>
         </div>
     )
 }
 
 
- 

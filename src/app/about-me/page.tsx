@@ -2,124 +2,89 @@ import { Timeline } from '@/components/features/Timeline'
 import Image from 'next/image'
 import React from 'react'
 
-export type Achievement = {
-  year: string
-  title: string
-  description: string[]
-}
-
-function page() {
-
-  const images = [
-    "/Frame 10.png",
-    "/Frame 10.png",
-    "/Frame 10.png",
-    "/Frame 10.png",
-    "/Frame 10.png",
-  ]
-
+export default function AboutPage() {
 
   return (
-    <section className=" line-b ">
-      <div  >
+    <section className="bg-white dark:bg-zinc-950 transition-colors duration-500 pt-16">
+      <div>
 
-
-
-        <div className="flex line-x  max-w-5xl mx-auto  relative justify-center py-10 flex-col  "  >
-
-          <div className="w-full h-full absolute  [background-image:radial-gradient(#d1d5db_1px,transparent_1px)] dark:[background-image:radial-gradient(#3f3f46_1px,transparent_1px)] [background-size:20px_20px]" />
-
-
-          <div className="space-y-6 px-8  py-8 relative z-10 ">
-
-            <h1 className="text-4xl italic    sm:text-6xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-              I am <span className="text-indigo-600 dark:text-indigo-400">Batman</span>.
-              <br />
-              A vigilante by night, innovator by day.
+        <div className="grid grid-cols-1 lg:grid-cols-12 line-b">
+          <div className="lg:col-span-8 px-5 sm:px-8 pt-24 line-r">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-zinc-900 dark:text-white leading-[0.9]">
+              DESIGN <span className="text-indigo-500 italic">ENGINEER</span>.
+              <span className="block text-2xl md:text-3xl font-light tracking-tight text-zinc-400 mt-4">
+                Building the bridge between design and production.
+              </span>
             </h1>
-            <p className="max-w-2xl   text-lg text-gray-600 dark:text-gray-400">
-              Protecting Gotham with strategy, discipline, and technology. By day,
-              I build enterprises. By night, I defend the city. Explore my work
-              below.
-            </p>
 
-          </div>
+            <div className="mt-12 space-y-8 max-w-xl">
+              <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
+                I specialize in crafting high-fidelity interfaces and scalable design systems.
+                My work focuses on the space where aesthetic intent meets technical feasibility.
+              </p>
 
 
-          <div className="flex px-8    ">
-            {images.map((src, i) => (
-              <div
-                key={i}
-                className={`
-      relative w-32 h-32 rounded-xl overflow-hidden object-cover shadow-2xl
-      -ml-8 first:ml-0
-      ${i % 2 === 0 ? "-rotate-6" : "rotate-6"}
-      ${i % 3 === 0 ? "-translate-y-1" : "translate-y-2"}
-      z-${i + 10}
-    `}
-              >
-                <Image
-                  src={src}
-                  alt={`Image ${i + 1}`}
-                  fill
-                  className="rounded-xl object-cover"
-                />
+              <div className="flex items-center gap-4 text-indigo-500 font-medium group cursor-pointer">
+                <span className="h-[1px] w-12 bg-indigo-500 transition-all group-hover:w-20" />
+                <span className="uppercase tracking-widest text-xs">View Technical Process</span>
               </div>
-            ))}
-
+            </div>
           </div>
 
+
+          <div className="lg:col-span-4 bg-zinc-50 dark:bg-zinc-900 flex items-center justify-center p-8">
+            <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+              <Image src="/avatars/profile.jpg" alt="Profile Pic" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+          </div>
         </div>
 
-        <div className=' line-t'>
-          <div className=' max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-5 line-x'>
-            <div className="col-span-3 line-r space-y-4 p-8 text-lg ">
-              <p className="text-gray-700 leading-relaxed dark:text-gray-400">
-                Hi, I’m <span className="font-semibold text-blue-600">Danial</span>, a curious
-                problem-solver with a passion for building digital experiences that balance{" "}
-                <span className="font-medium">functionality</span> and{" "}
-                <span className="font-medium">creativity</span>. My journey in tech started
-                with experimenting on small projects, and has grown into designing and
-                developing applications that people actually use.
-              </p>
 
-              <p className="text-gray-700 leading-relaxed dark:text-gray-400">
-                I’m currently pursuing a degree in{" "}
-                <span className="font-semibold">Computer Science</span> with a focus on{" "}
-                <span className="font-semibold">Leadership & Technology</span>. Along the
-                way, I’ve explored full-stack development, cloud deployments, and design
-                systems, constantly learning how technology can make life simpler and more
-                efficient.
-              </p>
-
-              <p className="text-gray-700 leading-relaxed dark:text-gray-400">
-                Outside of coding, I enjoy diving into{" "}
-                <span className="italic">UI/UX trends</span>, brainstorming business ideas,
-                and collaborating on projects that push me outside my comfort zone. My goal
-                is to combine technical expertise with leadership to create solutions that
-                are both innovative and impactful.
-              </p>
-
-              <p className="text-gray-700 leading-relaxed dark:text-gray-400">
-                Whether it’s <span className="font-medium">building apps</span>,
-                <span className="font-medium"> mentoring peers</span>, or{" "}
-                <span className="font-medium">crafting strategies</span>, I love working at
-                the intersection of <span className="text-blue-600">technology</span> and{" "}
-                <span className="text-blue-600">people</span>.
-              </p>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12">
 
 
-            <div className='col-span-2 px-8 py-8'>
+          <div className="lg:col-span-4 p-5 sm:p-8   line-r bg-zinc-50/50 dark:bg-zinc-900/10">
+            <div className="sticky top-24">
+
               <Timeline />
             </div>
           </div>
 
+
+          <div className="lg:col-span-8 p-5 sm:p-8   space-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="space-y-4">
+                <h3 className="text-zinc-900 dark:text-white font-bold italic text-sm">01. THE APPROACH</h3>
+                <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Hi, I’m <span className="text-zinc-900 dark:text-white">John</span>. I believe that good design is a technical problem.
+                  I’ve spent my career perfecting the handoff between pixels and code, ensuring that no detail is lost in translation.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-zinc-900 dark:text-white font-bold italic text-sm">02. THE STACK</h3>
+                <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Currently pursuing CS with a focus on System Leadership. I operate at the intersection of
+                  frontend architecture, fluid motion, and component-driven development.
+                </p>
+              </div>
+            </div>
+
+
+            <div className="relative h-64 w-full rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
+              <Image src="/projects/process.jpg" alt="Workspace" fill className="object-cover opacity-80" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-white/10 font-black text-6xl tracking-tighter uppercase select-none">CRAFTSMANSHIP</span>              </div>
+            </div>
+
+            <p className="text-2xl text-zinc-800 dark:text-zinc-200 font-light italic leading-snug">
+              "Whether it’s <span className="text-indigo-500">mentoring engineers</span> or refining a design system,
+              I find my best work where technology meets human interaction."
+            </p>
+          </div>
+
         </div>
       </div>
-
     </section>
   )
 }
-
-export default page

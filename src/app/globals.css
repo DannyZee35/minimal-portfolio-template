@@ -13,20 +13,17 @@
 
 }
 
- [data-theme="dark"] {
-  --grid-line-color: color-mix(
-    in oklab,
-    oklch(87.2% 0.01 258.338) 15%
-, 
-    transparent
-  );
+[data-theme="dark"] {
+  --grid-line-color: color-mix(in oklab,
+      oklch(87.2% 0.01 258.338) 15%,
+      transparent);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-gray-950: oklch(13% .028 261.692);
- 
+
 
 
   --font-sans: var(--font-roboto);
@@ -54,9 +51,9 @@
   }
 
   [data-theme="dark"] .line-y::before,
-[data-theme="dark"] .line-y::after {
-  @apply bg-gray-600;
-}
+  [data-theme="dark"] .line-y::after {
+    @apply bg-gray-600;
+  }
 
   .line-y::before {
     top: 0;
@@ -66,7 +63,7 @@
     bottom: 0;
   }
 
-  /* Vertical (left + right) */
+
   .line-x {
     @apply relative;
   }
@@ -78,11 +75,11 @@
   }
 
   [data-theme="dark"] .line-x::before,
-[data-theme="dark"] .line-x::after {
-  @apply bg-gray-600;
-}
+  [data-theme="dark"] .line-x::after {
+    @apply bg-gray-600;
+  }
 
-  
+
 
   .line-x::before {
     left: 0;
@@ -92,7 +89,7 @@
     right: 0;
   }
 
-  /* Top only */
+
   .line-t {
     @apply relative;
   }
@@ -102,11 +99,11 @@
     @apply absolute top-0 inset-x-0 h-px bg-gray-200 z-50;
   }
 
-   [data-theme="dark"] .line-t::before {
+  [data-theme="dark"] .line-t::before {
     @apply bg-gray-600;
   }
 
-  /* Bottom only */
+
   .line-b {
     @apply relative;
   }
@@ -129,10 +126,11 @@
     @apply absolute inset-y-0 left-0 w-px bg-gray-200;
     z-index: 50;
   }
- [data-theme="dark"] .line-l::before {
+
+  [data-theme="dark"] .line-l::before {
     @apply bg-gray-600;
   }
-   
+
   .line-r {
     @apply relative;
   }
@@ -142,7 +140,8 @@
     @apply absolute inset-y-0 right-0 w-px bg-gray-200;
     z-index: 50;
   }
-   [data-theme="dark"] .line-r::after {
+
+  [data-theme="dark"] .line-r::after {
     @apply bg-gray-600;
   }
 }
@@ -164,17 +163,17 @@ body {
       background-position: 150% center;
     }
 
-    /* start off right */
+
     75% {
       background-position: -50% center;
     }
 
-    /* move left → right visually */
+
     100% {
       background-position: -50% center;
     }
 
-    /* pause off-screen left */
+
   }
 
 }

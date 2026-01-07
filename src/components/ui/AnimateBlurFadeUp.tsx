@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { motion,MotionProps } from "motion/react"
+import { motion, MotionProps } from "motion/react"
 
 
 
@@ -12,14 +12,14 @@ type AnimateBlurProps = MotionProps & {
 
 }
 
-export const AnimateBlurFadeUp = ({ children, initialBlur = "20px", duration=0.3, delay = 0 }: AnimateBlurProps) => {
-    
-    
+export const AnimateBlurFadeUp = ({ children, initialBlur = "20px", duration = 0.3, delay = 0 }: AnimateBlurProps) => {
+
+
     return (
         <motion.div
             initial={{
                 opacity: 0,
-                y:20,
+                y: 20,
                 filter: `blur(${initialBlur})`
             }}
             whileInView={{
@@ -28,8 +28,8 @@ export const AnimateBlurFadeUp = ({ children, initialBlur = "20px", duration=0.3
                 filter: "blur(0px)"
             }}
             transition={{
-               duration,
-               delay,
+                duration,
+                delay,
                 ease: "easeOut"
             }}
         >

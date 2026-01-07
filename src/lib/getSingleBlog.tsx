@@ -1,4 +1,5 @@
-import {promises as fs} from "fs"
+
+import { promises as fs } from "fs"
 import { compileMDX } from "next-mdx-remote/rsc"
 import path from "path"
 
@@ -19,7 +20,7 @@ export const getSingleBlog = async(blogID: string) => {
         return null
     }
 
-     const {content, frontmatter}= await compileMDX<{title:string}>({
+     const {content, frontmatter}= await compileMDX<FrontMatter>({
         source:blog,
         options:{parseFrontmatter:true}
     })

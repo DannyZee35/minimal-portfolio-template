@@ -1,39 +1,41 @@
-import { achievements } from '@/constants/data'
-import { Badge, BadgeCheck } from 'lucide-react'
+import { achievements } from '@/constants/data';
+import { BadgeCheck } from 'lucide-react'
 import React from 'react'
+
+export type Achievement = {
+  year: string;
+  title: string;
+  description: string[];
+}
+
 
 export const Timeline = () => {
   return (
-     <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-8 dark:text-gray-200  ">Achievements</h2>
-      <div className="relative flex flex-col gap-4">
-        {achievements.map((item, i) => {
-          
-          return (
-            <div key={i} className="flex flex-col gap-4">
-           
-              <time className="dark:text-gray-400 flex items-center text-sm font-semibold rounded-md py-1 px-4 border border-gray-500 w-fit text-gray-800">
-               
-                {item.year}
-              </time>
+    <div className="max-w-2xl mx-auto">
+      <h2 className="text-2xl font-bold mb-8 dark:text-gray-200">Achievements</h2>
+      <div className="relative flex flex-col gap-8">
 
-              {/* Title + Icon */}
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
-                <BadgeCheck className="w-5 h-5 text-blue-500 dark:text-gray-300" />
-                {item.title}
-              </h3>
+        {achievements.map((item: Achievement, i: number) => (
+          <div key={i} className="flex flex-col gap-2">
 
-              
-              <div className="mt-1 space-y-1">
-                {item.description.map((line, j) => (
-                  <p key={j} className="text-gray-600 text-sm leading-relaxed dark:text-gray-400">
-                    {line}
-                  </p>
-                ))}
-              </div>
+            <time className="dark:text-gray-400 flex items-center text-sm font-semibold rounded-md py-1 px-4 border border-gray-500 w-fit text-gray-800">
+              {item.year}
+            </time>
+
+            <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <BadgeCheck className="w-5 h-5 text-blue-500 dark:text-gray-300" />
+              {item.title}
+            </h3>
+
+            <div className="mt-1 space-y-1">
+              {item.description.map((line: string, j: number) => (
+                <p key={j} className="text-gray-600 text-sm leading-relaxed dark:text-gray-400">
+                  {line}
+                </p>
+              ))}
             </div>
-          )
-        })}
+          </div>
+        ))}
       </div>
     </div>
   )

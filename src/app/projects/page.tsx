@@ -1,44 +1,39 @@
 import { Projects } from '@/sections/Projects'
 import React from 'react'
 
-
-
 function page() {
-
-
-
-
   return (
-    <section className=" line-b ">
-      <div className=" line-x ">
+    <section className="relative">
 
-          <div className=" relative z-10 line-b ">
-<div className='max-w-5xl mx-auto  px-8  py-8 line-x'>
-<h1 className="text-4xl      sm:text-6xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-              I am <span className="text-indigo-600 dark:text-indigo-400">Batman</span>.
-              <br />
-              A vigilante by night, innovator by day.
+      <section className="line-b">
+        <div className="bg-white dark:bg-zinc-950">
+          <div className="px-5 sm:px-8 pb-8 sm:pb-16 pt-24">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-[1px] w-8 bg-indigo-600 dark:bg-indigo-400" />
+              <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-indigo-600 dark:text-indigo-400">
+                Selected Projects
+              </p>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl font-black tracking-tighter text-zinc-900 dark:text-white leading-none">
+              Work that connects <br />
+              <span className="text-zinc-400 dark:text-zinc-600">design and code.</span>
             </h1>
-            <p className="max-w-2xl   text-lg text-gray-600 dark:text-gray-400">
-              Protecting Gotham with strategy, discipline, and technology. By day,
-              I build enterprises. By night, I defend the city. Explore my work
-              below.
+
+            <p className="max-w-xl mt-8 text-lg text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
+              A showcase of my recent work, ranging from complex web applications to
+              refined design systems. I focus on building products that are as
+              technically sound as they are visually polished.
             </p>
-</div>
-            
-
+          </div>
         </div>
-        <div>
-            <Projects/>
-        </div>
+      </section>
 
- 
 
- 
-  
- 
-      </div>
+      <section>
 
+        <Projects />
+      </section>
     </section>
   )
 }

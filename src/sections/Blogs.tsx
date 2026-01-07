@@ -1,48 +1,86 @@
+"use client"
+
 import { AnimateBlurFadeUp } from '@/components/ui/AnimateBlurFadeUp';
 import { ShimmerText } from '@/components/ui/ShimmerText';
-import { blogsData } from '@/constants/data'
-import Link from 'next/link';
+import { BlogCard } from '@/components/features/BlogCard';
+import { motion, Variants } from "motion/react"
 import React from 'react'
+import { usePathname } from 'next/navigation';
 
+const blurVariants: Variants = {
+  initial: { opacity: 0, y: 20, filter: "blur(20px)" },
+  animate: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.3, delay: i * 0.1, ease: "easeOut" },
+  }),
+};
 
-export type blogsProps = {
-    title: string;
-    description: string;
-    datePosted: string;
-    link: string;
+interface BlogsProps {
+  blogs: any[];
 }
-export const Blogs = () => {
-    return (
-        <>
-            <div className=' line-b'>
-                <div className='max-w-5xl mx-auto line-x  ' >
-                   <div className=' px-8 py-8  line-b'>
-                         <AnimateBlurFadeUp delay={.2}>
-                 <ShimmerText text='Thoughts from the Batcave, mostly at night.' spread='16px'/>
-                    </AnimateBlurFadeUp>
-                  
-                   </div>
-                    <div className='flex flex-col '>
-                        {blogsData.map(({ title, datePosted, description, link }, index) => (
-                            <div key={index}   className='flex    sm:flex-row flex-col sm:gap-0 gap-5 sm:py-0 py-8 w-full px-8 line-b'>
-                                <Link href={link} className='flex-1  line-r sm:py-8'>
 
-                                     
-                                        <h2 className='text-lg font-bold dark:text-gray-200'>{title}</h2>
-                                        <p className='text-md mt-3 dark:text-gray-400'>{description}</p>
-                                  
-                                   
-                                </Link>
-                                 <p className=' sm:px-8  sm:py-8 w-[250px] dark:text-gray-400'>{datePosted}</p>
-                            </div>
-                        ))}
-                    </div>
+export const Blogs = ({ blogs }: BlogsProps) => {
+  const pathname = usePathname()
+  return (
+    <div className={`w-full  ${pathname !== "/blogs" && "line-b"}`}>
+      <div className={` w-full `}>
+        {pathname !== "/blogs" && <div className={`py-8 px-5 sm:px-8 line-b`}>
+          <AnimateBlurFadeUp delay={0.2}>
+            <ShimmerText text='Documenting the process, one pixel at a time.' spread='16px' />
+          </AnimateBlurFadeUp>
 
-                </div>
-            </div>
+          <AnimateBlurFadeUp delay={0.3}>
+            <p className="max-w-2xl mt-6 text-xl leading-relaxed text-gray-500 dark:text-gray-400 font-light">
+              Technical write-ups, design deep-dives, and occasional observations on the state of digital interfaces.
 
 
+            </p>
+          </AnimateBlurFadeUp>
+        </div>}
 
-        </>
-    )
+        <div className={`  grid grid-cols-1 sm:grid-cols-3 w-full gap-5 sm:gap-5  ${pathname !== "/blogs" && "px-5 sm:px-8 py-6"}`} >
+          {blogs.slice(0, 3).map((blog, idx) => (
+            <motion.div
+              key={idx}
+              variants={blurVariants}
+              initial="initial"
+              animate="animate"
+              custom={idx}
+            >
+              <BlogCard
+                slug={blog.blog}
+                title={blog.frontmatter?.title ?? "Untitled"}
+                description={blog.frontmatter?.description ?? ""}
+                date={blog.frontmatter?.date ?? ""}
+                image={blog.frontmatter?.image ?? "/placeholder.png"}
+              />
+            </motion.div>
+          ))}
+
+          {pathname === "/blogs" &&
+            blogs.slice(3, 6).map((blog, idx) => (
+              <motion.div
+                key={idx}
+                variants={blurVariants}
+                initial="initial"
+                animate="animate"
+                custom={idx}
+              >
+                <BlogCard
+                  slug={blog.blog}
+                  title={blog.frontmatter?.title ?? "Untitled"}
+                  description={blog.frontmatter?.description ?? ""}
+                  date={blog.frontmatter?.date ?? ""}
+                  image={blog.frontmatter?.image ?? "/placeholder.png"}
+                />
+              </motion.div>
+
+            ))}
+        </div>
+
+      </div>
+    </div>
+  )
 }

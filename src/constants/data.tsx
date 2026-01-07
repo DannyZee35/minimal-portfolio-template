@@ -1,101 +1,72 @@
-import { Achievement } from "@/app/about-me/page";
-import { projectCardProps } from "@/components/features/ProjectCard";
-import { blogsProps } from "@/sections/Blogs";
-import { testimonialProps } from "@/sections/TestimonialSections";
-import { workExperienceProps } from "@/sections/WorkExperience";
- 
-export const projectsData: projectCardProps[] = [
+import { ProjectCardProps } from "@/components/features/ProjectCard";
+import { Achievement } from "@/components/features/Timeline";
+import { WorkExperienceProps } from "@/sections/WorkExperience";
+import { TestimonialProps } from "@/sections/TestimonialSections";
+
+export const projectsData: ProjectCardProps[] = [
   {
-    imageSrc: "/Frame 10.png",
-    title: "Portfolio Website",
-    description: "Even Batman needs a portfolio. This one helps me pretend I have a normal life."
+    imageSrc: "/projects/design-system.jpg",
+    title: "Core Design System",
+    description: "A centralized library of accessible, reusable components and design tokens built for high-scale enterprise applications.",
+    techStack: ["React", "TypeScript", "Tailwind", "Storybook"]
   },
   {
-    imageSrc: "/Frame 10.png",
-    title: "E-commerce App",
-    description: "An e-commerce app so slick, even the Joker can’t mess with the checkout."
+    imageSrc: "/projects/dashboard.jpg",
+    title: "Analytics Dashboard",
+    description: "High-performance data visualization interface focusing on real-time metrics and complex state management.",
+    techStack: ["Next.js", "Zustand", "D3.js", "Postgres"]
   },
   {
-    imageSrc: "/Frame 10.png",
-    title: "Chat App",
-    description: "Real-time chat, because Gotham deserves instant hero updates."
+    imageSrc: "/projects/ecommerce.jpg",
+    title: "Modular Commerce Platform",
+    description: "A headless e-commerce experience featuring fluid page transitions and an optimized multi-step checkout flow.",
+    techStack: ["Next.js", "Stripe", "Sanity", "Motion"]
   },
   {
-    imageSrc: "/Frame 10.png",
-    title: "Portfolio Website",
-    description: "Another portfolio site. Alfred says I have too many, but I disagree."
+    imageSrc: "/projects/lab.jpg",
+    title: "Interaction Lab",
+    description: "An experimental project exploring physics-based animations and gesture-driven UI components for mobile web.",
+    techStack: ["React", "Motion", "Three.js", "TypeScript"]
   },
   {
-    imageSrc: "/Frame 10.png",
-    title: "E-commerce App",
-    description: "Stripe-powered, because even superheroes need secure transactions."
+    imageSrc: "/projects/linear.jpg",
+    title: "Linear Task Manager",
+    description: "A keyboard-first productivity tool emphasizing speed, offline support, and seamless collaborative workflows.",
+    techStack: ["Node.js", "Redis", "Tailwind", "Motion"]
   },
   {
-    imageSrc: "/Frame 10.png",
-    title: "Chat App",
-    description: "Talk to your allies instantly—just don’t tell the villains."
+    imageSrc: "/projects/portfolio.jpg",
+    title: "Architectural Portfolio",
+    description: "This very site—designed to showcase technical rigor through clean typography and minimal, grid-based layout.",
+    techStack: ["Next.js", "Motion", "Tailwind", "Radix UI"]
   },
-]
+];
 
 
-export const blogsData: blogsProps[] = [
-  {
-    title: "Bat-CSS Secrets",
-    description: "Learning CSS in the Batcave: dark themes, sharp grids, and layouts that strike fear into villains.",
-    datePosted: "Thursday, Feb 15, 2024",
-    link: "/blog/bat-css-secrets"
-  },
-  {
-    title: "JavaScript for Vigilantes",
-    description: "Dodging bugs and catching callbacks faster than the Batmobile on a Gotham night.",
-    datePosted: "Friday, Feb 16, 2024",
-    link: "/blog/js-for-vigilantes"
-  },
-  {
-    title: "Real-Time Crime Alerts",
-    description: "Building chat and notification systems that keep Gotham’s heroes one step ahead of trouble.",
-    datePosted: "Saturday, Feb 17, 2024",
-    link: "/blog/real-time-crime-alerts"
-  },
-  {
-    title: "Wayne Tech UX Tips",
-    description: "Designing interfaces so smooth, even Alfred approves them before Batman storms in.",
-    datePosted: "Sunday, Feb 18, 2024",
-    link: "/blog/wayne-tech-ux-tips"
-  },
-  {
-    title: "Securing Gotham Online",
-    description: "Encryption, authentication, and other Bat-hacks to keep villains out of your data.",
-    datePosted: "Monday, Feb 19, 2024",
-    link: "/blog/securing-gotham-online"
-  },
-]
-
- 
-export const workExperienceData: workExperienceProps[] = [
+export const workExperienceData: WorkExperienceProps[] = [
   {
     companyName: "Google",
-    role: "Frontend Developer",
+    role: "Design Engineer",
     description:
-      "Developed and maintained responsive web applications using React, TypeScript, and TailwindCSS. Collaborated with UX designers to deliver pixel-perfect, accessible, and scalable UI components.",
+      "Spearheaded the development of core UI frameworks and design system components. Focused on bridging the gap between high-fidelity motion prototypes and production-ready React implementations.",
     startDate: "Jan 2021",
     endDate: "Dec 2021",
     companyLogo: "/work/google.png",
   },
   {
     companyName: "Amazon",
-    role: "Full Stack Developer",
+    role: "Product Engineer",
     description:
-      "Built and optimized full-stack applications using Next.js, Node.js, and Express. Designed REST APIs, integrated third-party services (payments, analytics), and improved system performance by 20%.",
+      "Architected scalable full-stack interfaces for complex internal tooling. Optimized frontend performance metrics and streamlined the developer handoff process through automated component documentation.",
     startDate: "Feb 2020",
     endDate: "Dec 2020",
     companyLogo: "/work/amazon.png",
   },
   {
     companyName: "Shopify",
-    role: "Backend Developer",
+    role: "UI Engineer",
     description:
-      "Implemented scalable and secure APIs with Express and MongoDB. Designed efficient database schemas, automated deployments with CI/CD pipelines, and reduced server response time by 15%.",
+      "Engineered merchant-facing dashboard experiences with a focus on accessibility and modularity. Built custom data visualization components and optimized state management for high-density interfaces.",
     startDate: "Aug 2019",
     endDate: "Jan 2020",
     companyLogo: "/work/shopify.png",
@@ -104,7 +75,7 @@ export const workExperienceData: workExperienceProps[] = [
     companyName: "Microsoft",
     role: "Software Engineer Intern",
     description:
-      "Contributed to the development of mobile-first features for internal tools. Wrote unit and integration tests, updated technical documentation, and participated in agile sprint planning.",
+      "Contributed to the evolution of internal design languages. Developed interactive prototypes for mobile-first features and ensured design consistency across cross-platform system tools.",
     startDate: "Jun 2018",
     endDate: "Jul 2019",
     companyLogo: "/work/microsoft.png",
@@ -113,87 +84,68 @@ export const workExperienceData: workExperienceProps[] = [
 
 
 
- export const testimonialsData: testimonialProps[] = [
+export const testimonialsData: TestimonialProps[] = [
   {
-    name: "Bruce Wayne (Batman)",
-    avatar: "/Frame 10.png",
+    name: "Sarah Chen",
+    avatar: "",
     testimonial:
-      "Faster than the Batmobile and just as precise. Gotham would be proud of their work. Every detail was considered, leaving no room for mistakes in the final product.",
-    designation: "CEO, Wayne Enterprises",
+      "One of the rare engineers who truly understands design intent. They don't just build components; they build systems that empower the whole team to move faster.",
+    designation: "Product Lead, Vercel",
   },
   {
-    name: "Clark Kent (Superman)",
-    avatar: "/Frame 10.png",
+    name: "Marcus Thorne",
+    avatar: "",
     testimonial:
-      "Reliable and super-efficient, delivering results even I can’t fly past. Their commitment to quality is as strong as my Kryptonian resolve.",
-    designation: "Reporter, Daily Planet",
+      "The attention to detail in their motion work and interaction design is unmatched. They brought a level of polish to our dashboard that we didn't think was possible.",
+    designation: "Senior UI Designer, Stripe",
   },
   {
-    name: "Diana Prince (Wonder Woman)",
-    avatar: "/Frame 10.png",
+    name: "Elena Rodriguez",
+    avatar: "",
     testimonial:
-      "Professional, heroic, and always on time. A team worthy of the Justice League, with creativity and technical expertise that would impress even the gods of Themyscira.",
-    designation: "Ambassador, Themyscira",
+      "Reliable, technically sharp, and a great communicator. They bridged the gap between our design team and the engineering backend perfectly during our scale-up phase.",
+    designation: "CTO, Linear",
   },
   {
-    name: "Barry Allen (The Flash)",
-    avatar: "/Frame 10.png",
+    name: "David Park",
+    avatar: "",
     testimonial:
-      "Lightning-fast responses and speedy delivery—rivaling even my own pace. Communication was clear, and every milestone was met without delay.",
-    designation: "Forensic Scientist, Central City",
-  },
-  {
-    name: "Arthur Curry (Aquaman)",
-    avatar: "/Frame 10.png",
-    testimonial:
-      "Smooth, reliable, and always afloat under pressure. The team navigates challenges like I navigate the oceans—effortlessly and with precision.",
-    designation: "King of Atlantis",
-  },
-  {
-    name: "Hal Jordan (Green Lantern)",
-    avatar: "/Frame 10.png",
-    testimonial:
-      "Creativity powered by pure will. Their work shines brighter than a Green Lantern ring, turning ambitious ideas into reality with flawless execution.",
-    designation: "Pilot, Green Lantern Corps",
+      "Lightning-fast execution without sacrificing code quality. They helped us refactor our design system in record time while keeping the user experience seamless.",
+    designation: "Engineering Manager, Framer",
   },
 ];
 
-
 export const achievements: Achievement[] = [
   {
-    year: "2021",
-    title: "Started Computer Science Degree",
+    year: "2024",
+    title: "Design System Architecture",
     description: [
-      "Began my journey in Computer Science.",
-      "Focused on leadership & technology pathway.",
+      "Architected a multi-brand design system used across 4 separate product lines, reducing design-to-code latency by 40%.",
+      "Implemented automated visual regression testing to ensure 100% UI consistency."
     ],
- 
-  },
-  {
-    year: "2022",
-    title: "First Freelance Project",
-    description: [
-      "Developed and deployed a full-stack web app for a local business.",
-      "Stack: Next.js, MongoDB, Tailwind CSS.",
-    ],
-    
   },
   {
     year: "2023",
-    title: "Hackathon Winner",
+    title: "Open Source Contributor",
     description: [
-      "Won 1st place in a university hackathon.",
-      "Created an AI-powered study tool with real-time feedback.",
+      "Contributed several performance-focused hooks to a major UI library, gaining over 500 stars on GitHub.",
+      "Published a technical deep-dive on fluid motion and physics-based animation in React."
     ],
-   
   },
   {
-    year: "2024",
-    title: "Internship at Tech Company",
+    year: "2022",
+    title: "Frontend Leadership",
     description: [
-      "Worked as a frontend developer on a SaaS dashboard.",
-      "Gained experience with React, TypeScript, and large-scale systems.",
+      "Led a team of 5 developers to refactor a legacy dashboard into a modern, accessible Next.js application.",
+      "Introduced strict TypeScript standards and a component-driven development workflow."
     ],
-    
   },
-]
+  {
+    year: "2021",
+    title: "CS & Leadership Honors",
+    description: [
+      "Recognized for exceptional performance in Computer Science, focusing on Software Engineering patterns.",
+      "Mentored 15+ junior students in modern frontend frameworks and design principles."
+    ],
+  },
+];

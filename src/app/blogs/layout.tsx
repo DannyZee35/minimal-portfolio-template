@@ -1,7 +1,4 @@
- 
- 
 
- 
 
 export default function BlogsLayout({
   children,
@@ -9,15 +6,9 @@ export default function BlogsLayout({
   children: React.ReactNode;
 }>) {
   return (
-   
-       
-  
-        <div className="max-w-5xl mx-auto   line-x p-8  ">
-            {children}
-        </div>
-     
-       
-        
-    
+
+    <div className="flex-grow w-full">
+      {children}
+    </div>
   );
 }

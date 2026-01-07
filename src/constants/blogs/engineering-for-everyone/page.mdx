@@ -1,0 +1,115 @@
+---
+title: "Engineering for Everyone: A11y in React"
+description: "Going beyond Aria-labels to build truly inclusive components from the ground up."
+date: 2024-01-25
+image: /blogs/design-engineering.jpg
+---
+
+Accessibility is often treated as a finishing touch.
+
+A checklist. A few `aria-label`s. A quick pass with a screen reader before shipping. On paper, the product is “accessible.” In practice, many users are still locked out.
+
+True accessibility in React isn’t about patches—it’s about intent.
+
+---
+
+### Accessibility Starts Before Code
+
+Inclusive interfaces are designed, not retrofitted.
+
+Decisions about layout, contrast, focus order, and interaction patterns happen long before a component is written. When these decisions are postponed, engineers are forced to fix structural problems with attributes that were never meant to carry that weight.
+
+ARIA exists to *enhance* semantics—not replace them.
+
+---
+
+### Semantics Do Most of the Work
+
+The most accessible React components are often the simplest.
+
+Native HTML elements already encode years of accessibility research. Buttons know how to behave. Inputs know how to announce themselves. Landmarks define structure without a single extra prop.
+
+When we replace these primitives with divs and spans, we inherit all their responsibilities—and often fail to meet them.
+
+Accessibility improves dramatically when semantics come first.
+
+---
+
+### Keyboard Navigation Is a Contract
+
+If a component can be used with a mouse, it must be usable with a keyboard—without exceptions.
+
+This means:
+- Logical tab order
+- Visible focus states
+- Predictable escape routes
+- No keyboard traps
+
+Keyboard users don’t explore randomly. They rely on consistency. Breaking that contract breaks trust.
+
+---
+
+### Focus Is Part of the UX
+
+Focus management is not an implementation detail—it’s user experience.
+
+Modals should trap focus intentionally. Drawers should return focus when closed. Dynamic content should announce itself at the right moment.
+
+Ignoring focus doesn’t just affect screen reader users—it affects anyone navigating without precision input.
+
+---
+
+### ARIA Is Not a Shortcut
+
+ARIA attributes are powerful, but they are also easy to misuse.
+
+Common problems include:
+- Over-describing elements
+- Conflicting roles
+- Adding ARIA where native semantics already exist
+
+The rule is simple: **use ARIA only when HTML cannot express the behavior on its own**.
+
+Most accessibility issues don’t come from missing ARIA—they come from unnecessary ARIA.
+
+---
+
+### Building Accessible Components at Scale
+
+In real products, accessibility must scale with the system.
+
+This means:
+- Baking accessibility into base components
+- Encoding keyboard and focus behavior once
+- Testing components in isolation
+- Documenting accessibility guarantees
+
+A design system that is accessible by default reduces risk across the entire product.
+
+---
+
+### Testing Beyond Automation
+
+Automated tools are useful, but incomplete.
+
+They can catch contrast issues and missing labels, but they can’t judge clarity, flow, or cognitive load. Manual testing with keyboards and screen readers is still essential.
+
+If a component feels awkward to use without a mouse, it probably is.
+
+---
+
+### Accessibility Is Engineering Discipline
+
+Building inclusive interfaces is not about compliance—it’s about craftsmanship.
+
+It requires empathy, technical rigor, and a willingness to slow down long enough to get things right. The payoff is a product that works better for everyone, not just a subset of users.
+
+---
+
+### Closing
+
+Accessibility in React isn’t a feature you add.
+
+It’s a standard you uphold.
+
+When components are built with inclusion at their core, the result isn’t just a more accessible product—it’s a better engineered one.
